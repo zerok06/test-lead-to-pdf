@@ -31,7 +31,7 @@ const FormLeadToPDF = () => {
     <>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Lead ID" value={'20603885'} />
-        <button type="submit">Enviar</button>
+        <button type="submit">{loading ? 'Loading...' : 'Generate PDF'}</button>
       </form>
       {leadId && (
         <a href={leadId} target="_blank" rel="noreferrer" download>
